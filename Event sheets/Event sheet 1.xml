@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="record" sid="735108068740821" static="0" type="number">0</variable>
+        <variable constant="0" name="speed" sid="3206606467736665" static="0" type="number">0</variable>
+        <variable constant="0" name="score" sid="4113030016357442" static="0" type="number">0</variable>
+        <event-block sid="9250395795097949">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5696079271142757" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2880044825318286" type="run">
+                    <param id="0" name="Animation">&quot;run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="5955578948830093" type="System">
+                    <param id="0" name="Variable">speed</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9048207468785908">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1065442806933576" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="3379154083235846" type="run" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="9990841410034347" type="run">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="8704844928972437" type="run">
+                    <param id="0" name="Animation">&quot;jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Play" sid="302865863209111" type="Audio">
+                    <param id="0" name="Audio file">play</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9298802103715283">
+            <conditions>
+                <condition id="3" name="On key released" sid="7370095797043327" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9692876697946377" type="run">
+                    <param id="0" name="Animation">&quot;run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="755481801214314">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7346767077781568" type="System" />
+            </conditions>
+            <actions>
+                <action id="-17" name="Move forward" sid="221747633608947" type="TiledBackground">
+                    <param id="0" name="Distance">-speed</param>
+                </action>
+                <action id="-17" name="Move forward" sid="9520749723116106" type="run">
+                    <param id="0" name="Distance">speed</param>
+                </action>
+                <action id="-1" name="Set X" sid="8752949334264691" type="run">
+                    <param id="0" name="X">175</param>
+                </action>
+                <action id="-17" name="Move forward" sid="347658129567935" type="Sprite3">
+                    <param id="0" name="Distance">-speed</param>
+                </action>
+                <action id="-17" name="Move forward" sid="219426670062997" type="Sprite4">
+                    <param id="0" name="Distance">-speed</param>
+                </action>
+                <action id="-17" name="Move forward" sid="818847613688266" type="Sprite5">
+                    <param id="0" name="Distance">-speed</param>
+                </action>
+                <action id="-17" name="Move forward" sid="958900525756352" type="Sprite6">
+                    <param id="0" name="Distance">speed</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="142175194025266">
+            <conditions>
+                <condition id="2" name="Key is down" sid="260479960304763" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="793041424150301" type="run" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="989544091455358" type="run">
+                    <param id="0" name="Animation">&quot;sit&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="691982973312148">
+            <conditions>
+                <condition id="3" name="On key released" sid="570919848982882" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="620796212584657" type="run">
+                    <param id="0" name="Animation">&quot;run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="351552504400860">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="392171627635454" type="Sprite3">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">-31</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="122790299021089" type="Sprite3">
+                    <param id="0" name="X">1319</param>
+                </action>
+                <action id="4" name="Set animation" sid="776525543884728" type="Sprite3">
+                    <param id="0" name="Animation">choose(&quot;one&quot;,&quot;two&quot;,&quot;three&quot;)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="654089945284129">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="375878945225543" type="System">
+                    <param id="0" name="Interval (seconds)">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="223361572603070" type="System">
+                    <param id="0" name="Variable">speed</param>
+                    <param id="1" name="Value">1.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="614510927512025">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="688048327046581" type="Sprite4">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="529470144129855" type="Sprite4">
+                    <param id="0" name="X">random(1370, 1500)</param>
+                </action>
+                <action id="-2" name="Set Y" sid="210512106583781" type="Sprite4">
+                    <param id="0" name="Y">random(40, 350)</param>
+                </action>
+                <action id="4" name="Set animation" sid="229068782137514" type="Sprite4">
+                    <param id="0" name="Animation">choose(&quot;one&quot;,&quot;two&quot;)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="150272152700658">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="944504430706334" type="Sprite5">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">30</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="537930911594815" type="Sprite5">
+                    <param id="0" name="X">random(1400, 1500)</param>
+                </action>
+                <action id="-2" name="Set Y" sid="210732404605818" type="Sprite5">
+                    <param id="0" name="Y">5+random(1, 3)*20</param>
+                </action>
+                <action id="4" name="Set animation" sid="276530323287535" type="Sprite5">
+                    <param id="0" name="Animation">choose(&quot;one&quot;, &quot;two&quot;)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="791226848896742">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="399279279117487" type="System">
+                    <param id="0" name="First value">score</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">record</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="189526278628434" type="System">
+                    <param id="0" name="Variable">record</param>
+                    <param id="1" name="Value">score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="770069259569920">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="468130773655079" type="run">
+                    <param id="0" name="Object">Sprite3</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="231149287180012" type="run">
+                    <param id="0" name="Object">Sprite6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="591838954466728" type="System">
+                    <param id="0" name="Variable">speed</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Play" sid="364638844940419" type="Audio">
+                    <param id="0" name="Audio file">collision</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="835371454343281" type="run">
+                    <param id="0" name="Animation">&quot;jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set item" sid="183764325575596" type="LocalStorage">
+                    <param id="0" name="Key">&quot;Record&quot;</param>
+                    <param id="1" name="Value">record</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="316787803208824">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="964863144609137" type="System">
+                    <param id="0" name="Interval (seconds)">random(15,20)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="156342179694675" type="System">
+                    <param id="0" name="Object to create">Sprite6</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-1" name="Set X" sid="118225093944013" type="Sprite6">
+                    <param id="0" name="X">random(1320,1400)</param>
+                </action>
+                <action id="-2" name="Set Y" sid="929220736596114" type="Sprite6">
+                    <param id="0" name="Y">random(522/568)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="904061193066368">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="448455054134554" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="234476091001320" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="812578740376319" type="Text">
+                    <param id="0" name="Text">score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="827052226981313">
+            <conditions>
+                <condition id="15" name="On all sets complete" sid="782377785462268" type="LocalStorage" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="361737108350585" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="795140890816751" type="System">
+                    <param id="0" name="Layout">Screen</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
